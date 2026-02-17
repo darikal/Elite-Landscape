@@ -15,9 +15,10 @@
       <span>Elite Landscaping & Irrigation</span>
     </div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
+      <a href="#before-after" class="nav-link">Before & After</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
 
@@ -27,23 +28,6 @@
       <img src="Elite_Logo_ShirtReady_Transparent[1].png" alt="Elite Logo">
       <h1>Elite Landscaping & Irrigation</h1>
       <p>Transforming outdoor spaces with quality and care.</p>
-    </div>
-  </section>
-
-  <!-- ABOUT PANEL -->
-  <section id="about" class="content left">
-    <div class="inner">
-      <h2>About Us</h2>
-      <p>Elite Landscaping & Irrigation provides professional landscaping services, irrigation solutions, and maintenance for residential and commercial properties.</p>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS PANEL -->
-  <section id="testimonials" class="content right">
-    <div class="inner">
-      <h2>Testimonials</h2>
-      <p>"Elite Landscaping transformed our backyard into a dream oasis! Highly recommend their services." – Jane D.</p>
-      <p>"Professional, reliable, and the results were amazing. Our lawn has never looked better!" – Mike R.</p>
     </div>
   </section>
 
@@ -68,6 +52,23 @@
     </div>
   </section>
 
+  <!-- ABOUT PANEL -->
+  <section id="about" class="content left">
+    <div class="inner">
+      <h2>About Us</h2>
+      <p>Elite Landscaping & Irrigation provides professional landscaping services, irrigation solutions, and maintenance for residential and commercial properties.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS PANEL -->
+  <section id="testimonials" class="content right">
+    <div class="inner">
+      <h2>Testimonials</h2>
+      <p>"Elite Landscaping transformed our backyard into a dream oasis! Highly recommend their services." – Jane D.</p>
+      <p>"Professional, reliable, and the results were amazing. Our lawn has never looked better!" – Mike R.</p>
+    </div>
+  </section>
+
   <!-- CONTACT PANEL -->
   <section id="contact" class="content right">
     <div class="inner">
@@ -88,6 +89,7 @@
 
   <!-- BEFORE/AFTER JS -->
   <script>
+  // Slider
   const baContainers = document.querySelectorAll('.ba-container');
 
   baContainers.forEach(container => {
@@ -133,6 +135,29 @@
         handle.style.left = initialWidth + "px";
       }, 600);
     }, 800);
+  });
+
+  // Navbar scroll highlight
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if(link.getAttribute("href") === "#" + sectionId) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
   });
   </script>
 
