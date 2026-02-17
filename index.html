@@ -63,9 +63,7 @@
         </div>
 
         <!-- Pink slider handle -->
-        <div class="ba-slider">
-          <div class="ba-handle"></div>
-        </div>
+        <div class="ba-handle"></div>
       </div>
     </div>
   </section>
@@ -93,9 +91,8 @@
   const baContainers = document.querySelectorAll('.ba-container');
 
   baContainers.forEach(container => {
-    const slider = container.querySelector('.ba-slider');
     const after = container.querySelector('.ba-after');
-    const handle = slider.querySelector('.ba-handle');
+    const handle = container.querySelector('.ba-handle');
 
     let isDragging = false;
 
@@ -109,20 +106,21 @@
       handle.style.left = position + "px";
     }
 
-    slider.addEventListener('mousedown', () => isDragging = true);
+    handle.addEventListener('mousedown', () => isDragging = true);
     window.addEventListener('mouseup', () => isDragging = false);
     window.addEventListener('mousemove', (e) => {
       if(isDragging) slide(e.clientX);
     });
 
-    slider.addEventListener('touchstart', () => isDragging = true);
+    handle.addEventListener('touchstart', () => isDragging = true);
     window.addEventListener('touchend', () => isDragging = false);
     window.addEventListener('touchmove', (e) => {
       if(isDragging) slide(e.touches[0].clientX);
     });
 
-    // Initialize handle position
-    const initialWidth = after.offsetWidth;
+    // Initialize handle position at 50%
+    const initialWidth = container.offsetWidth / 2;
+    after.style.width = initialWidth + "px";
     handle.style.left = initialWidth + "px";
 
     // Hint swipe animation
