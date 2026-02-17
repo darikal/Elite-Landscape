@@ -65,19 +65,29 @@ body {
 .hero-text {
   background: rgba(30, 58, 138, 0.88);
   color: #fff;
-  padding: 50px;
-  border-radius: 12px;
+  padding: 55px;
+  border-radius: 14px;
   text-align: center;
   border: 3px solid #f8c8dc;
 }
 
-/* HERO LOGO FLOAT ANIMATION */
+/* HERO LOGO + PINK HIGHLIGHT */
 .hero-text img {
   max-width: 420px;
   width: 100%;
-  margin-bottom: 25px;
-  filter: brightness(0) invert(1)
-          drop-shadow(0 0 12px rgba(248, 200, 220, 0.45));
+  margin-bottom: 28px;
+  padding: 18px;
+  border-radius: 18px;
+
+  /* WHITE LOGO */
+  filter: brightness(0) invert(1);
+
+  /* PINK HIGHLIGHT RING */
+  box-shadow:
+    0 0 0 4px rgba(248, 200, 220, 0.85),
+    0 0 28px rgba(248, 200, 220, 0.55);
+
+  /* FLOAT */
   animation: softFloat 6s ease-in-out infinite;
 }
 
@@ -192,6 +202,7 @@ footer {
 
   .hero-text img {
     max-width: 260px;
+    padding: 14px;
   }
 
   .hero-text h1 {
