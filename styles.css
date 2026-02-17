@@ -225,14 +225,38 @@ footer {
   }
 }
 
+/* FULL WIDTH BEFORE & AFTER SECTION */
+.content-fullwidth {
+  width: 100vw;
+  padding: 80px 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-center {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.inner-center h2 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+.inner-center p {
+  margin-bottom: 30px;
+}
+
 /* BEFORE & AFTER SLIDER */
 .ba-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 900px;
   height: 400px;
-  margin-top: 20px;
+  margin: 0 auto;
   border-radius: 12px;
   cursor: ew-resize;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
