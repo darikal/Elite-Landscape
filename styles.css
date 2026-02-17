@@ -31,9 +31,12 @@ body {
   gap: 12px;
 }
 
-.brand img {
+.brand img,
+.hero-text img {
   height: 42px;
+  filter: brightness(0) invert(1);
 }
+
 
 .brand span {
   color: #fff;
