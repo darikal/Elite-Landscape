@@ -40,6 +40,27 @@
   </div>
 </section>
 
+<section id="before-after" class="content left">
+  <div class="inner">
+    <h2>Before & After</h2>
+    <p>See the transformations from our landscaping projects!</p>
+
+    <div class="ba-container">
+      <!-- Before image -->
+      <img src="before.jpg" alt="Before Landscaping" class="ba-image">
+      
+      <!-- After image overlay -->
+      <div class="ba-image ba-after" style="width:50%;">
+        <img src="after.jpg" alt="After Landscaping">
+      </div>
+
+      <!-- Pink slider handle -->
+      <div class="ba-slider"></div>
+    </div>
+  </div>
+</section>
+
+
 <section id="testimonials" class="content right">
   <div class="inner">
     <h2>Testimonials</h2>
@@ -70,6 +91,41 @@
 <footer>
   © 2026 Elite Landscaping & Irrigation
 </footer>
+
+<script>
+const baContainers = document.querySelectorAll('.ba-container');
+
+baContainers.forEach(container => {
+  const slider = container.querySelector('.ba-slider');
+  const after = container.querySelector('.ba-after');
+
+  let isDragging = false;
+
+  const slide = (x) => {
+    const rect = container.getBoundingClientRect();
+    let position = x - rect.left;
+    if(position < 0) position = 0;
+    if(position > rect.width) position = rect.width;
+
+    after.style.width = position + "px";
+    slider.style.left = position + "px";
+  }
+
+  slider.addEventListener('mousedown', () => isDragging = true);
+  window.addEventListener('mouseup', () => isDragging = false);
+  window.addEventListener('mousemove', (e) => {
+    if(isDragging) slide(e.clientX);
+  });
+
+  // Touch support
+  slider.addEventListener('touchstart', () => isDragging = true);
+  window.addEventListener('touchend', () => isDragging = false);
+  window.addEventListener('touchmove', (e) => {
+    if(isDragging) slide(e.touches[0].clientX);
+  });
+});
+</script>
+
 
 </body>
 </html>
