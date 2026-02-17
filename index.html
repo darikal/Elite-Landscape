@@ -8,124 +8,124 @@
 </head>
 <body>
 
-<header class="navbar">
-  <div class="brand">
-    <img src="https://raw.githubusercontent.com/darikal/Elite-Landscape/main/Elite_Logo_ShirtReady_Transparent%5B1%5D.png" alt="Elite Landscaping & Irrigation Logo">
-    <span>Elite Landscaping & Irrigation</span>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <img src="https://raw.githubusercontent.com/darikal/Elite-Landscape/main/Elite_Logo_ShirtReady_Transparent%5B1%5D.png" alt="Elite Landscaping & Irrigation Logo">
-    <h1>Elite Landscaping & Irrigation</h1>
-    <p>Professional Outdoor Care You Can Trust</p>
-  </div>
-</section>
-
-<section id="about" class="content left">
-  <div class="inner">
-    <h2>About Us</h2>
-    <p>
-      Elite Landscaping & Irrigation provides professional lawn care,
-      irrigation services, trimming, cleanups, and full property
-      maintenance. We take pride in delivering reliable, high-quality
-      results for residential and commercial properties.
-    </p>
-  </div>
-</section>
-
-<section id="before-after" class="content left">
-  <div class="inner">
-    <h2>Before & After</h2>
-    <p>See the transformations from our landscaping projects!</p>
-
-    <div class="ba-container">
-      <!-- Before image -->
-      <img src="before.jpg" alt="Before Landscaping" class="ba-image">
-      
-      <!-- After image overlay -->
-      <div class="ba-image ba-after" style="width:50%;">
-        <img src="after.jpg" alt="After Landscaping">
-      </div>
-
-      <!-- Pink slider handle -->
-      <div class="ba-slider"></div>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="Elite_Logo_ShirtReady_Transparent[1].png" alt="Elite Logo">
+      <span>Elite Landscaping & Irrigation</span>
     </div>
-  </div>
-</section>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <img src="Elite_Logo_ShirtReady_Transparent[1].png" alt="Elite Logo">
+      <h1>Elite Landscaping & Irrigation</h1>
+      <p>Transforming outdoor spaces with quality and care.</p>
+    </div>
+  </section>
 
-<section id="testimonials" class="content right">
-  <div class="inner">
-    <h2>Testimonials</h2>
-    <p>
-      “Outstanding work and attention to detail. Our landscaping has never
-      looked better.”
-      <br><strong>– Sarah M.</strong>
-    </p>
-    <p>
-      “Reliable, professional, and always on time. Highly recommended.”
-      <br><strong>– James R.</strong>
-    </p>
-  </div>
-</section>
+  <!-- ABOUT PANEL -->
+  <section id="about" class="content left">
+    <div class="inner">
+      <h2>About Us</h2>
+      <p>Elite Landscaping & Irrigation provides professional landscaping services, irrigation solutions, and maintenance for residential and commercial properties.</p>
+    </div>
+  </section>
 
-<section id="contact" class="content left">
-  <div class="inner">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="How can we help?"></textarea>
-      <button type="submit">Request a Quote</button>
-    </form>
-  </div>
-</section>
+  <!-- TESTIMONIALS PANEL -->
+  <section id="testimonials" class="content right">
+    <div class="inner">
+      <h2>Testimonials</h2>
+      <p>"Elite Landscaping transformed our backyard into a dream oasis! Highly recommend their services." – Jane D.</p>
+      <p>"Professional, reliable, and the results were amazing. Our lawn has never looked better!" – Mike R.</p>
+    </div>
+  </section>
 
-<footer>
-  © 2026 Elite Landscaping & Irrigation
-</footer>
+  <!-- BEFORE & AFTER PANEL -->
+  <section id="before-after" class="content left">
+    <div class="inner">
+      <h2>Before & After</h2>
+      <p>See the transformations from our landscaping projects!</p>
 
-<script>
-const baContainers = document.querySelectorAll('.ba-container');
+      <div class="ba-container">
+        <!-- Before image -->
+        <img src="before.jpg" alt="Before Landscaping" class="ba-image">
 
-baContainers.forEach(container => {
-  const slider = container.querySelector('.ba-slider');
-  const after = container.querySelector('.ba-after');
+        <!-- After image overlay -->
+        <div class="ba-image ba-after" style="width:50%;">
+          <img src="after.jpg" alt="After Landscaping">
+        </div>
 
-  let isDragging = false;
+        <!-- Pink slider handle -->
+        <div class="ba-slider">
+          <div class="ba-handle"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  const slide = (x) => {
-    const rect = container.getBoundingClientRect();
-    let position = x - rect.left;
-    if(position < 0) position = 0;
-    if(position > rect.width) position = rect.width;
+  <!-- CONTACT PANEL -->
+  <section id="contact" class="content right">
+    <div class="inner">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    after.style.width = position + "px";
-    slider.style.left = position + "px";
-  }
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 Elite Landscaping & Irrigation. All rights reserved.
+  </footer>
 
-  slider.addEventListener('mousedown', () => isDragging = true);
-  window.addEventListener('mouseup', () => isDragging = false);
-  window.addEventListener('mousemove', (e) => {
-    if(isDragging) slide(e.clientX);
+  <!-- BEFORE/AFTER JS -->
+  <script>
+  const baContainers = document.querySelectorAll('.ba-container');
+
+  baContainers.forEach(container => {
+    const slider = container.querySelector('.ba-slider');
+    const after = container.querySelector('.ba-after');
+    const handle = slider.querySelector('.ba-handle');
+
+    let isDragging = false;
+
+    const slide = (x) => {
+      const rect = container.getBoundingClientRect();
+      let position = x - rect.left;
+      if(position < 0) position = 0;
+      if(position > rect.width) position = rect.width;
+
+      after.style.width = position + "px";
+      handle.style.left = position + "px";
+    }
+
+    slider.addEventListener('mousedown', () => isDragging = true);
+    window.addEventListener('mouseup', () => isDragging = false);
+    window.addEventListener('mousemove', (e) => {
+      if(isDragging) slide(e.clientX);
+    });
+
+    slider.addEventListener('touchstart', () => isDragging = true);
+    window.addEventListener('touchend', () => isDragging = false);
+    window.addEventListener('touchmove', (e) => {
+      if(isDragging) slide(e.touches[0].clientX);
+    });
+
+    // Initialize handle position
+    const initialWidth = after.offsetWidth;
+    handle.style.left = initialWidth + "px";
   });
-
-  // Touch support
-  slider.addEventListener('touchstart', () => isDragging = true);
-  window.addEventListener('touchend', () => isDragging = false);
-  window.addEventListener('touchmove', (e) => {
-    if(isDragging) slide(e.touches[0].clientX);
-  });
-});
-</script>
-
+  </script>
 
 </body>
 </html>

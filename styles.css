@@ -75,23 +75,17 @@ body {
   border: 3px solid #f8c8dc;
 }
 
-/* HERO LOGO + PINK HIGHLIGHT + FLOAT */
+/* HERO LOGO + FLOAT + PINK HIGHLIGHT */
 .hero-text img {
   max-width: 420px;
   width: 100%;
   margin-bottom: 28px;
   padding: 18px;
   border-radius: 18px;
-
-  /* White logo */
   filter: brightness(0) invert(1);
-
-  /* Pink highlight ring */
   box-shadow:
     0 0 0 4px rgba(248, 200, 220, 0.85),
     0 0 28px rgba(248, 200, 220, 0.55);
-
-  /* Soft float */
   animation: softFloat 6s ease-in-out infinite;
 }
 
@@ -207,7 +201,6 @@ footer {
     font-size: 26px;
   }
 
-  /* Hide brand text on small screens for clean nav */
   .brand span {
     display: none;
   }
@@ -225,20 +218,20 @@ footer {
   }
 }
 
-/* Extra small screens (optional) */
 @media (max-width: 420px) {
   .navbar nav a {
     font-size: 13px;
     margin-left: 10px;
   }
 }
+
 /* BEFORE & AFTER SLIDER */
 .ba-container {
   position: relative;
   overflow: hidden;
   width: 100%;
   max-width: 900px;
-  height: 400px; /* adjust to your image ratio */
+  height: 400px;
   margin-top: 20px;
   border-radius: 12px;
   cursor: ew-resize;
@@ -267,32 +260,45 @@ footer {
   object-fit: cover;
 }
 
+/* SLIDER HANDLE */
 .ba-slider {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 4px;
+  width: 40px;
   height: 100%;
-  background: #f8c8dc; /* pink accent */
   cursor: ew-resize;
   z-index: 10;
-  transition: background 0.2s;
+  background: transparent;
 }
 
-.ba-slider:hover {
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: #f8c8dc;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(248,200,220,0.7);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.ba-slider:hover .ba-handle {
   background: #fff;
 }
 
-/* Responsive adjustments */
+.ba-slider:active .ba-handle {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
 @media (max-width: 768px) {
   .ba-container {
     height: 280px;
   }
-
-  .ba-slider {
-    width: 3px;
-  }
 }
+
 @media (max-width: 420px) {
   .ba-container {
     height: 220px;
