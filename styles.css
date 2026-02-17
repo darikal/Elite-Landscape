@@ -20,12 +20,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 12px 40px;
   z-index: 1000;
-  border-bottom: 4px solid #f8c8dc; /* pink accent */
+  border-bottom: 4px solid #f8c8dc;
 }
 
-.logo {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  height: 42px;
+}
+
+.brand span {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -44,7 +54,7 @@ body {
 /* HERO */
 .hero {
   height: 90vh;
-  margin-top: 60px;
+  margin-top: 70px;
   background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -52,16 +62,21 @@ body {
 }
 
 .hero-text {
-  background: rgba(30, 58, 138, 0.85);
+  background: rgba(30, 58, 138, 0.88);
   color: #fff;
   padding: 40px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   border: 3px solid #f8c8dc;
 }
 
+.hero-text img {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
+
 .hero-text h1 {
-  font-size: 42px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
@@ -154,6 +169,10 @@ footer {
   }
 
   .hero-text h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .brand span {
+    display: none; /* cleaner mobile header */
   }
 }
