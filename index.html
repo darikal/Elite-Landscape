@@ -124,6 +124,17 @@
     // Initialize handle position
     const initialWidth = after.offsetWidth;
     handle.style.left = initialWidth + "px";
+
+    // Hint swipe animation
+    const hintWidth = Math.min(initialWidth + 60, container.offsetWidth);
+    setTimeout(() => {
+      after.style.width = hintWidth + "px";
+      handle.style.left = hintWidth + "px";
+      setTimeout(() => {
+        after.style.width = initialWidth + "px";
+        handle.style.left = initialWidth + "px";
+      }, 600);
+    }, 800);
   });
   </script>
 
