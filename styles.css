@@ -194,28 +194,29 @@ body {
    LEFT / RIGHT SECTION DIVIDER
 ========================= */
 .L-divider {
-  width: 130px;
   height: 4px;
-  margin-top: 8px;
-  margin-bottom: 16px;
   background-color: #f8c8dc;
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(248,200,220,.6);
-  /* Default left */
-  margin-left: 0;
+  margin-bottom: 16px;
 }
 
-/* Right-aligned sections auto-adjust */
-.content.right .L-divider {
+/* Section-specific widths */
+.about-divider {
+  width: 120px;
+  margin-top: 8px;
+}
+
+.testimonials-divider {
+  width: 200px;
+  margin-top: 8px;
   margin-left: auto;
   margin-right: 0;
 }
 
-/* Centered sections */
-.content-fullwidth .L-divider,
-.services-section .divider {
-  margin-left: auto;
-  margin-right: auto;
+.contact-divider {
+  width: 240px;
+  margin-top: 8px;
 }
 
 /* =========================
