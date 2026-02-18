@@ -1,6 +1,3 @@
-/* =========================
-   RESET & GLOBAL
-========================= */
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +16,7 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -61,9 +56,7 @@ body {
   color: #f8c8dc;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
   height: 90vh;
   margin-top: 70px;
@@ -94,9 +87,7 @@ body {
   margin: 15px 0;
 }
 
-/* =========================
-   CONTENT PANELS
-========================= */
+/* CONTENT PANELS */
 .content {
   width: 75vw;
   background: #fff;
@@ -119,9 +110,7 @@ body {
   max-width: 900px;
 }
 
-/* =========================
-   FULL WIDTH
-========================= */
+/* FULL WIDTH */
 .content-fullwidth {
   width: 100vw;
   background: #fff;
@@ -136,9 +125,7 @@ body {
   text-align: center;
 }
 
-/* =========================
-   BEFORE / AFTER SLIDER
-========================= */
+/* BEFORE AFTER */
 .ba-container {
   position: relative;
   height: 400px;
@@ -173,54 +160,12 @@ body {
   cursor: ew-resize;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 .services-section {
   background: #0a2a66;
   padding: 90px 0;
 }
 
-.divider {
-  width: 320px;
-  height: 4px;
-  margin: 28px auto 55px;
-  background: #f8c8dc;
-  border-radius: 2px;
-  box-shadow: 0 0 12px rgba(248,200,220,.6);
-}
-
-/* =========================
-   LEFT / RIGHT SECTION DIVIDER
-========================= */
-.L-divider {
-  width: 130px;
-  height: 4px;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  background-color: #f8c8dc;
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(248,200,220,.6);
-  /* Default left */
-  margin-left: 0;
-}
-
-/* Right-aligned sections auto-adjust */
-.content.right .L-divider {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-/* Centered sections */
-.content-fullwidth .L-divider,
-.services-section .divider {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* =========================
-   SERVICES TEXT COLOR
-========================= */
 .services-section h2 {
   color: #ffffff;
 }
@@ -273,9 +218,7 @@ body {
   background: #f8c8dc;
 }
 
-/* =========================
-   CONTACT FORM
-========================= */
+/* CONTACT FORM */
 #contact input,
 #contact textarea {
   width: 100%;
@@ -295,16 +238,35 @@ body {
 }
 
 /* =========================
-   RIGHT-ALIGNED TEXT FOR TESTIMONIALS
+   SECTION DIVIDERS
 ========================= */
-.content.right .inner {
-  text-align: right;
+
+/* Generic divider for left/right sections */
+.L-divider {
+  height: 4px;
+  background-color: #f8c8dc;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(248,200,220,.6);
+  margin: 8px 0 16px;
+
+  /* overlap sides */
+  width: calc(100% + 40px);
+  position: relative;
+  left: -20px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* Centered section divider (services, full-width) */
+.services-section .divider,
+.content-fullwidth .L-divider {
+  width: 200px;
+  margin: 8px auto 55px;
+  left: 0;
+}
+
+/* MOBILE */
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: 1fr; }
   .content { width: 100vw; }
+  .L-divider { width: 90%; left: 5%; } /* adjust for mobile */
+  .services-section .divider { width: 150px; }
 }
