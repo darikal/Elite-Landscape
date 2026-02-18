@@ -1,3 +1,6 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +19,9 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -56,7 +61,9 @@ body {
   color: #f8c8dc;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   height: 90vh;
   margin-top: 70px;
@@ -87,7 +94,9 @@ body {
   margin: 15px 0;
 }
 
-/* CONTENT PANELS */
+/* =========================
+   CONTENT PANELS
+========================= */
 .content {
   width: 75vw;
   background: #fff;
@@ -110,7 +119,9 @@ body {
   max-width: 900px;
 }
 
-/* FULL WIDTH */
+/* =========================
+   FULL WIDTH
+========================= */
 .content-fullwidth {
   width: 100vw;
   background: #fff;
@@ -125,7 +136,9 @@ body {
   text-align: center;
 }
 
-/* BEFORE AFTER */
+/* =========================
+   BEFORE / AFTER SLIDER
+========================= */
 .ba-container {
   position: relative;
   height: 400px;
@@ -160,26 +173,54 @@ body {
   cursor: ew-resize;
 }
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 .services-section {
   background: #0a2a66;
   padding: 90px 0;
 }
 
-/* SERVICES SECTION DIVIDER */
 .divider {
   width: 320px;
   height: 4px;
-
   margin: 28px auto 55px;
-
   background: #f8c8dc;
   border-radius: 2px;
-
-  box-shadow: 0 0 12px rgba(248, 200, 220, 0.6);
+  box-shadow: 0 0 12px rgba(248,200,220,.6);
 }
 
-/* SERVICES TEXT COLOR FIX */
+/* =========================
+   LEFT / RIGHT SECTION DIVIDER
+========================= */
+.L-divider {
+  width: 160px;
+  height: 4px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: #f8c8dc;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(248,200,220,.6);
+  /* Default left */
+  margin-left: 0;
+}
+
+/* Right-aligned sections auto-adjust */
+.content.right .L-divider {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Centered sections */
+.content-fullwidth .L-divider,
+.services-section .divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   SERVICES TEXT COLOR
+========================= */
 .services-section h2 {
   color: #ffffff;
 }
@@ -232,7 +273,9 @@ body {
   background: #f8c8dc;
 }
 
-/* CONTACT FORM */
+/* =========================
+   CONTACT FORM
+========================= */
 #contact input,
 #contact textarea {
   width: 100%;
@@ -251,7 +294,16 @@ body {
   color: #fff;
 }
 
-/* MOBILE */
+/* =========================
+   RIGHT-ALIGNED TEXT FOR TESTIMONIALS
+========================= */
+.content.right .inner {
+  text-align: right;
+}
+
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: 1fr; }
   .content { width: 100vw; }
