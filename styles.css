@@ -262,9 +262,76 @@ body {
 
 .service-card h3 {
   color: #0a2a66;
-  border-left: 5px solid #f3c6d8;
+  border-left: 5px solid #f8c8dc;
   padding-left: 12px;
   margin-bottom: 15px;
+}
+
+/* =========================
+   CONTACT SECTION (FINAL)
+========================= */
+
+#contact {
+  background: #ffffff;
+}
+
+#contact h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+#contact form {
+  max-width: 560px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  background: #f9fafb;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: #1e3a8a;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #6b7280;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #f8c8dc;
+  box-shadow: 0 0 0 4px rgba(248,200,220,0.35);
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+#contact button {
+  margin-top: 8px;
+  background: linear-gradient(135deg, #1e3a8a, #243f9e);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 36px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#contact button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(30,58,138,0.35);
 }
 
 /* =========================
@@ -284,58 +351,4 @@ body {
   .hero-text img {
     max-width: 260px;
   }
-}
-/* =========================
-   CONTACT SECTION FIX
-========================= */
-
-#contact {
-  background: #ffffff;
-}
-
-/* Heading */
-#contact h2 {
-  color: #1e3a8a;
-  font-size: 2rem;
-  margin-bottom: 25px;
-}
-
-/* Form layout */
-#contact form {
-  max-width: 520px;
-}
-
-/* Inputs */
-#contact input,
-#contact textarea {
-  font-size: 15px;
-  padding: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  border-color: #f8c8dc;
-  box-shadow: 0 0 0 3px rgba(248,200,220,0.35);
-}
-
-/* Button */
-#contact button {
-  margin-top: 10px;
-  background: #1e3a8a;
-  color: #fff;
-  font-size: 15px;
-  padding: 14px 32px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-
-#contact button:hover {
-  background: #162d6b;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
