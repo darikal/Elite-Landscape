@@ -166,6 +166,15 @@ body {
   padding: 90px 0;
 }
 
+/* SERVICES TEXT COLOR FIX */
+.services-section h2 {
+  color: #ffffff;
+}
+
+.services-intro {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .services-inner {
   max-width: 1400px;
   margin: auto;
@@ -187,8 +196,8 @@ body {
 }
 
 .service-card h3 {
-  border-left: 5px solid #f8c8dc;
-  padding-left: 12px;
+  color: #1e3a8a;
+  margin-bottom: 15px;
 }
 
 /* CTA BUTTON */
