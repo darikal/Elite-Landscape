@@ -308,6 +308,15 @@ body {
   margin-bottom: 18px; /* Adds space between each testimonial */
 }
 
+footer {
+  text-align: center;
+  color: #f8c8dc; /* soft pink to match the theme */
+  background-color: #0a2a66; /* dark blue footer background to match sections */
+  padding: 25px 0;
+  font-size: 0.95rem;
+}
+
+
 
 /* =========================
    MOBILE
