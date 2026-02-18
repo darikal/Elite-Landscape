@@ -312,8 +312,16 @@ body {
 }
 
 #contact textarea {
-  resize: vertical;
-  min-height: 140px;
+  width: 100%;
+  background: #f9fafb;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: #1e3a8a;
+  box-shadow: 0 4px 12px rgba(248, 200, 220, 0.15); /* soft pink shadow */
+  transition: border-color 0.2s, box-shadow 0.3s, background 0.2s;
 }
 
 #contact button {
