@@ -196,7 +196,7 @@ body {
 .L-divider {
   width: 130px;
   height: 4px;
-  margin-top: 8px;
+  margin-top: -6px;
   margin-bottom: 16px;
   background-color: #f8c8dc;
   border-radius: 2px;
