@@ -68,10 +68,13 @@ body {
   height: 90vh;
   color: #f8c8dc;
   margin-top: 70px;
-  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center center no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .hero-text {
@@ -80,10 +83,12 @@ body {
   border-radius: 14px;
   text-align: center;
   border: 3px solid #f8c8dc;
+  max-width: 95%; /* FIX: prevent overflow on mobile */
 }
 
 .hero-text img {
   max-width: 420px;
+  width: 100%; /* responsive */
   padding: 18px;
   filter: brightness(0) invert(1);
   box-shadow: 0 0 0 4px rgba(248,200,220,.85), 0 0 28px rgba(248,200,220,.55);
@@ -124,11 +129,12 @@ body {
    FULL WIDTH
 ========================= */
 .content-fullwidth {
-  width: 100vw;
+  width: 100%;
   background: #fff;
   padding: 80px 0;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .inner-center {
@@ -316,12 +322,18 @@ footer {
   font-size: 0.95rem;
 }
 
-
-
 /* =========================
    MOBILE
 ========================= */
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: 1fr; }
   .content { width: 100vw; }
+  .hero {
+    height: auto; /* Allow content to define height */
+    padding: 60px 15px;
+  }
+  .hero-text {
+    padding: 30px 20px; /* smaller padding for mobile */
+    max-width: 100%;
+  }
 }
