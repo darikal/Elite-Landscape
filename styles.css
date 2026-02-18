@@ -281,6 +281,7 @@ body {
 #contact textarea {
   width: 100%;
   padding: 16px;
+  resize: none;
   margin-bottom: 18px;
   border-radius: 12px;
   border: 1px solid #f3c6d8;
