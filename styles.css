@@ -285,3 +285,57 @@ body {
     max-width: 260px;
   }
 }
+/* =========================
+   CONTACT SECTION FIX
+========================= */
+
+#contact {
+  background: #ffffff;
+}
+
+/* Heading */
+#contact h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* Form layout */
+#contact form {
+  max-width: 520px;
+}
+
+/* Inputs */
+#contact input,
+#contact textarea {
+  font-size: 15px;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #f8c8dc;
+  box-shadow: 0 0 0 3px rgba(248,200,220,0.35);
+}
+
+/* Button */
+#contact button {
+  margin-top: 10px;
+  background: #1e3a8a;
+  color: #fff;
+  font-size: 15px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+#contact button:hover {
+  background: #162d6b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
