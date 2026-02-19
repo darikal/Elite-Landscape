@@ -350,7 +350,6 @@ footer {
   }
 
   .hero {
-    background-size: cover; /* ensure no horizontal scroll */
-    background-position: center top;
+    background: none;
   }
 }
