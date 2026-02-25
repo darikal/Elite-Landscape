@@ -31,85 +31,75 @@
     </div>
   </section>
 
+  <!-- BEFORE / AFTER -->
   <section id="before-after" class="content-fullwidth">
-  <div class="inner-center">
-    <h2>Before & After</h2>
-    <p>See the transformations from our landscaping projects!</p>
+    <div class="inner-center">
+      <h2>Before & After</h2>
+      <p>See the transformations from our landscaping projects!</p>
 
-    <div class="ba-container">
-      <!-- BEFORE -->
-       <img src="https://res.cloudinary.com/dbfpmqcol/image/upload/v1772047235/before_muknzn.jpg" alt="Before Landscaping" class="ba-before">
+      <div class="ba-container">
+        <!-- BEFORE -->
+        <img src="https://res.cloudinary.com/dbfpmqcol/image/upload/v1772047235/before_muknzn.jpg" alt="Before Landscaping" class="ba-before">
 
-      <!-- AFTER CLIP -->
-      <div class="ba-after">
-        <img src="https://res.cloudinary.com/dbfpmqcol/image/upload/v1772047235/after_svwxxn.jpg" alt="After Landscaping">
-      </div>
-
-      <!-- HANDLE -->
-      <div class="ba-handle"></div>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="services-section">
-  <div class="services-inner">
-
-    <h2>Our Services</h2>
-    <p class="services-intro">
-      Reliable landscaping and irrigation solutions designed to keep your property
-      clean, efficient, and thriving year-round.
-    </p>
-
-    <div class="divider"></div>
-
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-icon">
-          💧
+        <!-- AFTER CLIP -->
+        <div class="ba-after">
+          <img src="https://res.cloudinary.com/dbfpmqcol/image/upload/v1772047235/after_svwxxn.jpg" alt="After Landscaping">
         </div>
-        <h3>Irrigation Systems</h3>
-        <ul>
-          <li>Large sprinkler system installation</li>
-          <li>System repairs & diagnostics</li>
-          <li>Routine maintenance & optimization</li>
-        </ul>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon">
-          🌱
-        </div>
-        <h3>Lawn Maintenance</h3>
-        <ul>
-          <li>Professional mowing</li>
-          <li>Edge trimming & cleanup</li>
-          <li>Consistent scheduled care</li>
-        </ul>
+        <!-- HANDLE -->
+        <div class="ba-handle"></div>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          🌳
-        </div>
-        <h3>Trimming & Pruning</h3>
-        <ul>
-          <li>Hedge trimming & shaping</li>
-          <li>Small tree trimming</li>
-          <li>Health-focused pruning</li>
-        </ul>
-      </div>
-
     </div>
+  </section>
 
-    <div class="services-cta">
-      <a href="#contact" class="quote-btn">Request a Free Quote</a>
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="services-inner">
+      <h2>Our Services</h2>
+      <p class="services-intro">
+        Reliable landscaping and irrigation solutions designed to keep your property
+        clean, efficient, and thriving year-round.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💧</div>
+          <h3>Irrigation Systems</h3>
+          <ul>
+            <li>Large sprinkler system installation</li>
+            <li>System repairs & diagnostics</li>
+            <li>Routine maintenance & optimization</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌱</div>
+          <h3>Lawn Maintenance</h3>
+          <ul>
+            <li>Professional mowing</li>
+            <li>Edge trimming & cleanup</li>
+            <li>Consistent scheduled care</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌳</div>
+          <h3>Trimming & Pruning</h3>
+          <ul>
+            <li>Hedge trimming & shaping</li>
+            <li>Small tree trimming</li>
+            <li>Health-focused pruning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-cta">
+        <a href="#contact" class="quote-btn">Request a Free Quote</a>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-  <!-- ABOUT PANEL -->
+  <!-- ABOUT -->
   <section id="about" class="content left">
     <div class="inner">
       <h2>About Us</h2>
@@ -118,7 +108,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS PANEL -->
+  <!-- TESTIMONIALS -->
   <section id="testimonials" class="content right">
     <div class="inner">
       <h2>Testimonials</h2>
@@ -128,7 +118,7 @@
     </div>
   </section>
 
-  <!-- CONTACT PANEL -->
+  <!-- CONTACT -->
   <section id="contact" class="content left">
     <div class="inner">
       <h2>Contact Us</h2>
@@ -140,7 +130,6 @@
         <textarea placeholder="How can we help?" rows="5"></textarea>
         <button type="submit">Send Message</button>
       </form>
-
     </div>
   </section>
 
@@ -149,42 +138,48 @@
     &copy; 2026 Elite Landscaping & Irrigation. All rights reserved.
   </footer>
 
+  <!-- BEFORE / AFTER JS -->
   <script>
-const container = document.querySelector('.ba-container');
-const after = container.querySelector('.ba-after');
-const afterImg = after.querySelector('img');
-const handle = container.querySelector('.ba-handle');
+  const container = document.querySelector('.ba-container');
+  const after = container.querySelector('.ba-after');
+  const afterImg = after.querySelector('img');
+  const handle = container.querySelector('.ba-handle');
 
-let dragging = false;
+  let dragging = false;
 
-function updateSlider(x) {
-  const rect = container.getBoundingClientRect();
-  let pos = x - rect.left;
-  pos = Math.max(0, Math.min(pos, rect.width));
+  function updateSlider(x) {
+    const rect = container.getBoundingClientRect();
+    let pos = x - rect.left;
+    pos = Math.max(0, Math.min(pos, rect.width));
 
-  after.style.width = pos + 'px';
-  handle.style.left = pos + 'px';
-}
+    // Update clip width
+    after.style.width = pos + 'px';
+    handle.style.left = pos + 'px';
 
-handle.addEventListener('mousedown', () => dragging = true);
-window.addEventListener('mouseup', () => dragging = false);
-window.addEventListener('mousemove', e => {
-  if (dragging) updateSlider(e.clientX);
-});
+    // Move the after image inside to prevent stretching
+    afterImg.style.transform = `translateX(-${container.offsetWidth - pos}px)`;
+  }
 
-handle.addEventListener('touchstart', () => dragging = true);
-window.addEventListener('touchend', () => dragging = false);
-window.addEventListener('touchmove', e => {
-  if (dragging) updateSlider(e.touches[0].clientX);
-});
+  handle.addEventListener('mousedown', () => dragging = true);
+  window.addEventListener('mouseup', () => dragging = false);
+  window.addEventListener('mousemove', e => {
+    if (dragging) updateSlider(e.clientX);
+  });
 
-/* Initialize at 50% */
-window.addEventListener('load', () => {
-  const start = container.offsetWidth / 2;
-  after.style.width = start + 'px';
-  handle.style.left = start + 'px';
-});
-</script>
+  handle.addEventListener('touchstart', () => dragging = true);
+  window.addEventListener('touchend', () => dragging = false);
+  window.addEventListener('touchmove', e => {
+    if (dragging) updateSlider(e.touches[0].clientX);
+  });
+
+  /* Initialize at 50% */
+  window.addEventListener('load', () => {
+    const start = container.offsetWidth / 2;
+    after.style.width = start + 'px';
+    handle.style.left = start + 'px';
+    afterImg.style.transform = `translateX(-${container.offsetWidth - start}px)`;
+  });
+  </script>
 
 </body>
 </html>
