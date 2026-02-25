@@ -152,14 +152,14 @@ body {
 }
 
 /* =========================
-   BEFORE / AFTER SLIDER
+   BEFORE / AFTER SLIDER FIX
 ========================= */
 .ba-container {
   position: relative;
-  width: 60%;            /* 60% width on desktop */
+  width: 60%;
   max-width: 1100px;
   min-width: 700px;
-  height: 460px;         /* taller to avoid resizing effect */
+  height: 460px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 16px;
@@ -167,13 +167,14 @@ body {
 }
 
 .ba-container img {
-  position: absolute;    /* lock size */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  max-width: none; /* ✅ prevents stretching when after div grows */
 }
 
 .ba-after {
@@ -181,7 +182,14 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; /* ✅ clip the image perfectly */
+}
+
+.ba-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none; /* ✅ lock image size */
 }
 
 .ba-handle {
@@ -197,6 +205,16 @@ body {
   z-index: 10;
 }
 
+/* =========================
+   MOBILE OVERRIDE
+========================= */
+@media (max-width: 900px) {
+  .ba-container {
+    width: 100%;
+    min-width: 0;
+    height: 280px;
+  }
+}
 /* =========================
    SERVICES
 ========================= */
