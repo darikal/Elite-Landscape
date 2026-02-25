@@ -129,44 +129,33 @@ body {
 }
 
 /* =========================
-   FULL WIDTH (FIXED)
-========================= */
-.content-fullwidth {
-  width: 100%;
-  background: #fff;
-  padding: 80px 0;
-}
-
-/* THIS is what allows width again */
-.inner-center {
-  width: 100%;
-  max-width: 1600px;   /* ✅ WIDE BUT CONTROLLED */
-  margin: 0 auto;
-  padding: 0 40px;
-  text-align: center;
-}
-
-/* =========================
    BEFORE / AFTER SLIDER
 ========================= */
 .ba-container {
   position: relative;
-  width: 100%;
-  height: 380px;       /* Proper landscape ratio */
+  width: 60%;              /* ✅ intentional width */
+  max-width: 1100px;       /* keeps it elegant on big screens */
+  min-width: 700px;        /* prevents tiny collapse */
+  height: 460px;           /* ✅ taller so no resize feeling */
+  margin: 0 auto;          /* centered */
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,.18);
+  background: #000;
 }
 
-/* Base images */
+/* Lock BOTH images to container */
 .ba-container img {
+  position: absolute;      /* 🔑 CRITICAL */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;       /* fills without distortion */
   pointer-events: none;
 }
 
-/* After layer */
+/* After layer clips, image never resizes */
 .ba-after {
   position: absolute;
   top: 0;
@@ -175,26 +164,18 @@ body {
   overflow: hidden;
 }
 
-/* 🔑 LOCK IMAGE SIZE (no stretching) */
-.ba-after img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* Handle */
 .ba-handle {
   position: absolute;
   top: 50%;
-  transform: translate(-50%,-50%);
-  width: 26px;
-  height: 26px;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
   background: #f8c8dc;
   border-radius: 50%;
   box-shadow: 0 0 0 6px rgba(248,200,220,.35);
   cursor: ew-resize;
+  z-index: 10;
 }
 
 /* =========================
