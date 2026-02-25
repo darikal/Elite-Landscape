@@ -103,6 +103,12 @@ body {
   font-size: clamp(1.8rem, 2.5vw, 3.5rem);
 }
 
+@media (min-width: 901px) {
+  .hero {
+    margin-top: 35px;
+  }
+}
+
 /* =========================
    CONTENT PANELS
 ========================= */
@@ -129,32 +135,47 @@ body {
 }
 
 /* =========================
+   FULL WIDTH
+========================= */
+.content-fullwidth {
+  width: 100%;
+  background: #fff;
+  padding: 80px 0;
+}
+
+.inner-center {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+/* =========================
    BEFORE / AFTER SLIDER
 ========================= */
 .ba-container {
   position: relative;
-  width: 60%;              /* ✅ intentional width */
-  max-width: 1100px;       /* keeps it elegant on big screens */
-  min-width: 700px;        /* prevents tiny collapse */
-  height: 460px;           /* ✅ taller so no resize feeling */
-  margin: 0 auto;          /* centered */
+  width: 60%;            /* 60% width on desktop */
+  max-width: 1100px;
+  min-width: 700px;
+  height: 460px;         /* taller to avoid resizing effect */
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,.18);
 }
 
-/* Lock BOTH images to container */
 .ba-container img {
-  position: absolute;      /* 🔑 CRITICAL */
+  position: absolute;    /* lock size */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* fills without distortion */
+  object-fit: cover;
   pointer-events: none;
 }
 
-/* After layer clips, image never resizes */
 .ba-after {
   position: absolute;
   top: 0;
@@ -163,7 +184,6 @@ body {
   overflow: hidden;
 }
 
-/* Handle */
 .ba-handle {
   position: absolute;
   top: 50%;
@@ -225,6 +245,21 @@ body {
 }
 
 /* =========================
+   LEFT / RIGHT SECTION DIVIDER
+========================= */
+.L-divider {
+  height: 4px;
+  background-color: #f8c8dc;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(248,200,220,.6);
+  margin-bottom: 16px;
+}
+
+.about-divider { width: 112px; }
+.testimonials-divider { width: 140px; margin-left: auto; }
+.contact-divider { width: 130px; }
+
+/* =========================
    CONTACT FORM
 ========================= */
 #contact input,
@@ -235,6 +270,27 @@ body {
   margin-bottom: 18px;
   border-radius: 12px;
   border: 1px solid #f3c6d8;
+  box-shadow: 0 0 0 2px rgba(248,200,220,.25),
+              0 6px 14px rgba(248,200,220,.25);
+}
+
+#contact button {
+  padding: 15px 36px;
+  border-radius: 999px;
+  border: none;
+  background: #1e3a8a;
+  color: #fff;
+}
+
+/* =========================
+   RIGHT-ALIGNED TEXT FOR TESTIMONIALS
+========================= */
+.content.right .inner {
+  text-align: right;
+}
+
+#testimonials p {
+  margin-bottom: 18px;
 }
 
 /* =========================
@@ -272,7 +328,9 @@ footer {
   }
 
   .ba-container {
-    height: 260px;
+    width: 100%;
+    min-width: 0;
+    height: 280px;
   }
 
   .inner-center {
