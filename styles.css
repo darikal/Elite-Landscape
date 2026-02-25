@@ -207,6 +207,17 @@ body {
   z-index: 10;
 }
 
+/* Prevent image dragging and text selection for slider */
+.ba-container,
+.ba-container img,
+.ba-handle {
+  user-select: none;       /* disable text selection */
+  -webkit-user-drag: none; /* disable image drag on WebKit browsers */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: ew-resize;       /* keep the slider cursor */
+}
+
 /* =========================
    THUMBNAILS
 ========================= */
