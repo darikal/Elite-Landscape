@@ -1,0 +1,65 @@
+# =========================
+# Windows system files
+# =========================
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# =========================
+# macOS system files (in case cross-platform)
+# =========================
+.DS_Store
+
+# =========================
+# Node / JS
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+*.sqlite3
+
+# =========================
+# IDE / Editor configs
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# =========================
+# Logs and temp files
+# =========================
+*.log
+*.tmp
+*.temp
+*.bak
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Ignore your folder: "from elite"
+# =========================
+from elite/**
+
+# Optional: keep the folder empty with a placeholder
+#from elite/.gitkeep
