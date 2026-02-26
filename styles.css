@@ -375,8 +375,9 @@ body {
 }
 
 #testimonials p {
+  position: relative;
   background: #ffffff;
-  padding: 22px 26px;
+  padding: 28px 32px;
   border-radius: 14px;
   border-right: 6px solid #f8c8dc;
   box-shadow:
@@ -386,13 +387,24 @@ body {
   font-style: italic;
 }
 
-/* Quote feel */
+/* Opening quote */
 #testimonials p::before {
   content: "“";
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   color: #f8c8dc;
-  margin-right: 6px;
-  vertical-align: top;
+  position: absolute;
+  top: 12px;
+  left: 18px;
+}
+
+/* Closing quote */
+#testimonials p::after {
+  content: "”";
+  font-size: 2.6rem;
+  color: #f8c8dc;
+  position: absolute;
+  bottom: 10px;
+  right: 18px;
 }
 
 /* Mobile alignment correction */
@@ -404,6 +416,11 @@ body {
   #testimonials p {
     border-right: none;
     border-left: 6px solid #f8c8dc;
+  }
+
+  #testimonials p::after {
+    right: auto;
+    left: 18px;
   }
 }
 
