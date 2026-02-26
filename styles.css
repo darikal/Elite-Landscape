@@ -365,6 +365,49 @@ body {
 }
 
 /* =========================
+   TESTIMONIAL CARDS
+========================= */
+
+#testimonials .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#testimonials p {
+  background: #ffffff;
+  padding: 22px 26px;
+  border-radius: 14px;
+  border-right: 6px solid #f8c8dc;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.08),
+    0 0 0 2px rgba(248,200,220,0.25);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Quote feel */
+#testimonials p::before {
+  content: "“";
+  font-size: 2.4rem;
+  color: #f8c8dc;
+  margin-right: 6px;
+  vertical-align: top;
+}
+
+/* Mobile alignment correction */
+@media (max-width: 900px) {
+  .content.right .inner {
+    text-align: left;
+  }
+
+  #testimonials p {
+    border-right: none;
+    border-left: 6px solid #f8c8dc;
+  }
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
