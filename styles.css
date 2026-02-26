@@ -157,42 +157,37 @@ body {
 .ba-container {
   position: relative;
   width: 100%;
-  max-width: 1000px; /* restrict max width */
+  max-width: 1000px;
   margin: 50px auto 0;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,.18);
-  display: inline-block; /* shrink to image width */
 }
 
-/* Base image (before) */
 .ba-before {
   display: block;
   width: 100%;
-  height: auto; /* natural height */
+  height: auto;
 }
 
-/* After overlay container (clip window) */
 .ba-after {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;           /* slider controls this */
+  width: 50%;
   overflow: hidden;
 }
 
-/* After image stays same size as before */
 .ba-after img {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; /* match before width */
+  width: 100%;
   object-fit: cover;
 }
 
-/* Slider handle */
 .ba-handle {
   position: absolute;
   top: 50%;
@@ -207,15 +202,12 @@ body {
   z-index: 10;
 }
 
-/* Prevent image dragging and text selection for slider */
 .ba-container,
 .ba-container img,
 .ba-handle {
-  user-select: none;       /* disable text selection */
-  -webkit-user-drag: none; /* disable image drag on WebKit browsers */
-  -moz-user-select: none;
-  -ms-user-select: none;
-  cursor: ew-resize;       /* keep the slider cursor */
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: ew-resize;
 }
 
 /* =========================
@@ -234,11 +226,10 @@ body {
   cursor: pointer;
   border: 2px solid transparent;
   border-radius: 10px;
-  transition: border 0.2s;
 }
 
 .ba-thumb.selected {
-  border: 2px solid #f8c8dc;
+  border-color: #f8c8dc;
 }
 
 .ba-thumb img {
@@ -246,26 +237,6 @@ body {
   height: 80px;
   object-fit: cover;
   border-radius: 6px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 900px) {
-  .ba-container {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .ba-thumbnails {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .ba-thumb img {
-    width: 180px;
-    height: 120px;
-  }
 }
 
 /* =========================
@@ -285,7 +256,7 @@ body {
 
 .services-section h2,
 .services-intro {
-  color: #ffffff;
+  color: #fff;
 }
 
 .divider {
@@ -310,17 +281,12 @@ body {
   box-shadow: 0 20px 45px rgba(0,0,0,.18);
 }
 
-.service-card h3 {
-  color: #1e3a8a;
-  margin-bottom: 15px;
-}
-
 /* =========================
-   LEFT / RIGHT SECTION DIVIDER
+   SECTION DIVIDERS
 ========================= */
 .L-divider {
   height: 4px;
-  background-color: #f8c8dc;
+  background: #f8c8dc;
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(248,200,220,.6);
   margin-bottom: 16px;
@@ -331,18 +297,62 @@ body {
 .contact-divider { width: 130px; }
 
 /* =========================
+   TESTIMONIAL CARDS (FINAL)
+========================= */
+#testimonials .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+#testimonials p {
+  position: relative;
+  display: inline-block;
+  max-width: 680px;
+  width: fit-content;
+  background: #fff;
+  padding: 30px 34px;
+  border-radius: 14px;
+  border-right: 6px solid #f8c8dc;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.08),
+    0 0 0 2px rgba(248,200,220,.25);
+  margin-left: auto;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+#testimonials p::before {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-size: 2.4rem;
+  color: #f8c8dc;
+}
+
+#testimonials p::after {
+  content: "”";
+  position: absolute;
+  bottom: 10px;
+  right: 18px;
+  font-size: 2.4rem;
+  color: #f8c8dc;
+}
+
+/* =========================
    CONTACT FORM
 ========================= */
 #contact input,
 #contact textarea {
   width: 100%;
   padding: 16px;
-  resize: none;
   margin-bottom: 18px;
   border-radius: 12px;
   border: 1px solid #f3c6d8;
-  box-shadow: 0 0 0 2px rgba(248,200,220,.25),
-              0 6px 14px rgba(248,200,220,.25);
+  box-shadow:
+    0 0 0 2px rgba(248,200,220,.25),
+    0 6px 14px rgba(248,200,220,.25);
 }
 
 #contact button {
@@ -354,100 +364,17 @@ body {
 }
 
 /* =========================
-   RIGHT-ALIGNED TEXT FOR TESTIMONIALS
-========================= */
-.content.right .inner {
-  text-align: right;
-}
-
-#testimonials p {
-  margin-bottom: 18px;
-}
-
-/* =========================
-   TESTIMONIAL CARDS
-========================= */
-
-#testimonials .inner {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#testimonials p {
-  position: relative;
-  background: #ffffff;
-  padding: 28px 32px;
-  border-radius: 14px;
-  border-right: 6px solid #f8c8dc;
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.08),
-    0 0 0 2px rgba(248,200,220,0.25);
-  margin: 0;
-  font-style: italic;
-}
-
-/* Opening quote */
-#testimonials p::before {
-  content: "“";
-  font-size: 2.6rem;
-  color: #f8c8dc;
-  position: absolute;
-  top: 12px;
-  left: 18px;
-}
-
-/* Closing quote */
-#testimonials p::after {
-  content: "”";
-  font-size: 2.6rem;
-  color: #f8c8dc;
-  position: absolute;
-  bottom: 10px;
-  right: 18px;
-}
-
-/* Mobile alignment correction */
-@media (max-width: 900px) {
-  .content.right .inner {
-    text-align: left;
-  }
-
-  #testimonials p {
-  position: relative;
-  display: inline-block;          
-  max-width: 680px;               
-  width: fit-content;            
-  background: #ffffff;
-  padding: 28px 32px;
-  border-radius: 14px;
-  border-right: 6px solid #f8c8dc;
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.08),
-    0 0 0 2px rgba(248,200,220,0.25);
-  margin-left: auto;             
-  font-style: italic;
-}
-
-  #testimonials p::after {
-    right: auto;
-    left: 18px;
-  }
-}
-
-/* =========================
    FOOTER
 ========================= */
 footer {
   text-align: center;
   color: #f8c8dc;
-  background-color: #0a2a66;
+  background: #0a2a66;
   padding: 25px 0;
-  font-size: 0.95rem;
 }
 
 /* =========================
-   MOBILE CONTENT ADJUSTMENTS
+   MOBILE ADJUSTMENTS
 ========================= */
 @media (max-width: 900px) {
   .services-grid {
@@ -458,6 +385,22 @@ footer {
     width: 100vw;
   }
 
+  .content.right .inner {
+    text-align: left;
+  }
+
+  #testimonials p {
+    margin-left: 0;
+    max-width: 100%;
+    border-right: none;
+    border-left: 6px solid #f8c8dc;
+  }
+
+  #testimonials p::after {
+    right: auto;
+    left: 18px;
+  }
+
   .hero {
     height: auto;
     padding: 60px 15px;
@@ -466,7 +409,6 @@ footer {
 
   .hero-text {
     padding: 30px 20px;
-    max-width: 100%;
   }
 
   .inner-center {
