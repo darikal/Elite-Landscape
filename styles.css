@@ -74,7 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center center no-repeat;
+  background: url("https://res.cloudinary.com/dbfpmqcol/image/upload/v1772145177/imagejpeg_1_nrkk9j.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -318,9 +318,9 @@ body {
   box-shadow:
     0 10px 25px rgba(0,0,0,.08),
     0 0 0 2px rgba(248,200,220,.25);
-  margin-left: auto;
   font-style: italic;
   line-height: 1.6;
+  text-align: right;
 }
 
 #testimonials p::before {
