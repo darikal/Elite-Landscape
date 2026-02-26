@@ -414,9 +414,20 @@ body {
   }
 
   #testimonials p {
-    border-right: none;
-    border-left: 6px solid #f8c8dc;
-  }
+  position: relative;
+  display: inline-block;          
+  max-width: 680px;               
+  width: fit-content;            
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 14px;
+  border-right: 6px solid #f8c8dc;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.08),
+    0 0 0 2px rgba(248,200,220,0.25);
+  margin-left: auto;             
+  font-style: italic;
+}
 
   #testimonials p::after {
     right: auto;
