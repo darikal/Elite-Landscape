@@ -466,3 +466,19 @@ footer {
   margin-bottom: 16px;
   margin-left: 0;               /* stays aligned with heading */
 }
+/* =========================
+   MOBILE THUMBNAIL FIXES
+========================= */
+@media (max-width: 900px) {
+  .ba-thumbnails {
+    flex-wrap: wrap;       /* allows thumbnails to wrap to multiple rows */
+    justify-content: center;
+    gap: 12px;             /* slightly smaller gap for mobile */
+    max-width: 100%;
+  }
+
+  .ba-thumb img {
+    width: 45%;            /* two per row approximately */
+    height: auto;          /* maintain aspect ratio */
+  }
+}
