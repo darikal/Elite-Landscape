@@ -35,10 +35,12 @@ body {
 }
 
 .brand {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 
 .brand img {
   height: 42px;
@@ -307,7 +309,7 @@ body {
 
 .about-divider { width: 112px; }
 .testimonials-divider { width: 140px; margin-left: auto; }
-.contact-divider { width: 130px; }
+.contact-divider { width: 115px; }
 
 /* =========================
    TESTIMONIAL CARDS
@@ -428,4 +430,39 @@ footer {
   .inner-center {
     padding: 0 20px;
   }
+}
+
+/* =========================
+   ABOUT LINK (SAFE ADD)
+========================= */
+.about-more {
+  margin-top: 25px;
+}
+
+.about-more a {
+  font-weight: bold;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: 0.25s ease;
+}
+
+.about-more a:hover {
+  color: #f8c8dc;
+  text-decoration: underline;
+}
+
+.content.right .inner {
+  text-align: right; /* aligns heading and text to the right */
+}
+
+.owners-divider {
+  display: inline-block;        /* matches the heading width */
+  width: 195px;                 /* adjust to visually fit the heading text */
+  height: 4px;
+  background: #f8c8dc;          /* pink color */
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(248,200,220,.6);
+  margin-bottom: 16px;
+  margin-left: 0;               /* stays aligned with heading */
 }
